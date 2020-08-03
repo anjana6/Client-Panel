@@ -11,6 +11,7 @@ import {SettingComponent} from './components/setting/setting.component';
 import {NotFoundComponent} from './components/not-found/not-found.component';
 import { combineChange } from '@angular/fire/firestore';
 
+//import {AuthGard} from './gurdes/auth.gard';
 
 const routes: Routes = [
   {path: '', component: DashboardComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }

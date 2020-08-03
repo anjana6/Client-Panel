@@ -24,6 +24,7 @@ import { SettingComponent } from './components/setting/setting.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import {ClientService} from './services/client.service';
+import {AuthService} from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import {ClientService} from './services/client.service';
     AngularFirestoreModule,
     FlashMessagesModule.forRoot(),
   ],
-  providers: [ClientService],
+  providers: [ClientService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
