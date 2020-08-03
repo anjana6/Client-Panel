@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {ClientService} from '../../services/client.service';
 
 import {Client} from '../../modules/Client';
+import {SettingService} from '../../services/setting.service';
 
 
 @Component({
@@ -21,13 +22,14 @@ export class AddClientComponent implements OnInit {
     balance: 0
   } ;
 
-  disabaleBalnaceOnAdd: boolean = true;
+  disabaleBalnaceOnAdd: boolean = this.settingService.getSetting().disableBalanceOnAdd ;
   @ViewChild('clientForm') form: any;
 
   constructor(
     private flashMessage: FlashMessagesService,
     private router: Router,
-    private clientService: ClientService
+    private clientService: ClientService,
+    private settingService: SettingService
     ) { }
 
   ngOnInit(): void {
