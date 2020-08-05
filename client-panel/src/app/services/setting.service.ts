@@ -8,14 +8,21 @@ import {Setting} from '../modules/Setting';
 export class SettingService {
 
   setting: Setting = {
-    allowRegisteration: true,
-    disableBalanceOnAdd: false,
-    disableBalanceOnEdit: false,
+    disableBalanceOnAdd: true,
+    disableBalanceOnEdit: true,
   }
 
-  constructor() { }
+  constructor() {
+    if(localStorage.getItem('settings') != null){
+      this.setting = JSON.parse(localStorage.getItem('settings'));
+    }
+   }
 
   getSetting(): Setting{
     return this.setting;
+  }
+
+  changeSettings(setting: Setting): void{
+    localStorage.setItem('settings', JSON.stringify(setting));
   }
 }
