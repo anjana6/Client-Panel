@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.authService.getAuth().subscribe(auth =>{
-      if(auth){
+    this.authService.getAuth().subscribe(auth => {
+      if (auth){
         this.router.navigate(['/']);
       }
     });
