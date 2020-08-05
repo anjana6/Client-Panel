@@ -1,0 +1,33 @@
+[debug] [2020-08-05T16:45:53.562Z] ----------------------------------------------------------------------
+[debug] [2020-08-05T16:45:53.564Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ashakthi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-08-05T16:45:53.564Z] CLI Version:   8.6.0
+[debug] [2020-08-05T16:45:53.564Z] Platform:      win32
+[debug] [2020-08-05T16:45:53.564Z] Node Version:  v12.18.0
+[debug] [2020-08-05T16:45:53.565Z] Time:          Wed Aug 05 2020 22:15:53 GMT+0530 (India Standard Time)
+[debug] [2020-08-05T16:45:53.565Z] ----------------------------------------------------------------------
+[debug] [2020-08-05T16:45:53.565Z] 
+[debug] [2020-08-05T16:45:53.572Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-05T16:45:53.572Z] > authorizing via signed-in user
+[debug] [2020-08-05T16:45:53.573Z] [iam] checking project client-panel-c521d for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-05T16:45:53.575Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/client-panel-c521d:testIamPermissions  
+ {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-05T16:46:04.298Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. Client network socket disconnected before secure TLS connection was established
+[debug] [2020-08-05T16:46:04.300Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/client-panel-c521d  
+ 
+[debug] [2020-08-05T16:46:16.405Z] Server Error. Client network socket disconnected before secure TLS connection was established
+[debug] [2020-08-05T16:46:27.527Z] FirebaseError: Server Error. Client network socket disconnected before secure TLS connection was established
+    at Request._callback (C:\Users\ashakthi\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:32:31)
+    at self.callback (C:\Users\ashakthi\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:482:12)
+    at Request.onRequestError (C:\Users\ashakthi\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:877:8)
+    at ClientRequest.emit (events.js:327:22)
+    at ClientRequest.EventEmitter.emit (domain.js:482:12)
+    at TLSSocket.socketErrorListener (_http_client.js:426:9)
+    at TLSSocket.emit (events.js:315:20)
+    at TLSSocket.EventEmitter.emit (domain.js:482:12)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[error] 
+[error] Error: Failed to get Firebase project client-panel-c521d. Please make sure the project exists and your account has permission to access it.
